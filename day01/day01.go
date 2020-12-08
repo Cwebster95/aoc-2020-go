@@ -55,27 +55,29 @@ func partTwo(values []int) (int, error) {
 func main() {
 	data, err := ioutil.ReadFile("./input.txt")
 	if err != nil {
-		fmt.Printf("unable to open file: %v", err)
+		fmt.Printf("unable to open file: %v\n", err)
 		return
 	}
 
 	values, err := parseInput(data)
 	if err != nil {
-		fmt.Printf("unable to parse input: %v", err)
+		fmt.Printf("unable to parse input: %v\n", err)
+		return
 	}
 
 	partOneAnswer, err := partOne(values)
 	if err != nil {
-		fmt.Printf("error during part one: %v", err)
+		fmt.Printf("error during part one: %v\n", err)
+		return
 	}
 
 	fmt.Printf("Part One: %d\n", partOneAnswer)
 
 	partTwoAnswer, err := partTwo(values)
 	if err != nil {
-		fmt.Printf("error during part two: %v", err)
+		fmt.Printf("error during part two: %v\n", err)
+		return
 	}
 
 	fmt.Printf("Part Two: %d\n", partTwoAnswer)
-
 }

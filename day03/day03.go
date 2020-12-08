@@ -66,7 +66,7 @@ func partTwo(mapData []string) int {
 func main() {
 	data, err := ioutil.ReadFile("./input.txt")
 	if err != nil {
-		fmt.Printf("unable to open file: %v", err)
+		fmt.Printf("unable to open file: %v\n", err)
 		return
 	}
 
